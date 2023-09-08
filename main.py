@@ -6,7 +6,6 @@ app = FastAPI()
 
 @app.get("/api")
 def read_root(slack_name: str, track:str):
-    # get current datetime
     dt = datetime.now(timezone.utc)
     return {
         "slack_name":slack_name,
